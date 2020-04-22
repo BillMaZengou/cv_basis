@@ -1,7 +1,8 @@
 import cv2
 
 if __name__ == "__main__":
-    img = cv2.imread('./ceiling.jpg', cv2.IMREAD_UNCHANGED)
+    name = "food"
+    img = cv2.imread('./{}.jpg'.format(name), cv2.IMREAD_UNCHANGED)
     # cv2.imshow("Original image", img)
     print('Original Dimensions : ',img.shape)
 
@@ -29,7 +30,7 @@ if __name__ == "__main__":
     if k == 27:         # wait for ESC key to exit
         cv2.destroyAllWindows()
     elif k == ord('s'): # wait for 's' key to save and exit
-        cv2.imwrite("Resized_image.jpg",resized)
-        cv2.imwrite("INTER_NEAREST_image.jpg",resized1)
-        cv2.imwrite("INTER_LINEAR_image.jpg",resized2)
+        cv2.imwrite("Result/{}_Resized_image.jpg".format(name),resized)
+        cv2.imwrite("Result/{}_INTER_NEAREST_image.jpg".format(name),resized1)
+        cv2.imwrite("Result/{}_INTER_LINEAR_image.jpg".format(name),resized2)
         cv2.destroyAllWindows()
