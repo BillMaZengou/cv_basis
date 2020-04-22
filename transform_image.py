@@ -13,9 +13,9 @@ if __name__ == "__main__":
     convert = np.array(([1, 0, 0], [0, -1, 0], [cols/2, rows/2, 1]), dtype=np.float32)
     inverse = np.array(([1, 0, 0], [0, -1, 0], [-cols/2, rows/2, 1]), dtype=np.float32)
     S = np.array(([1, 0, 0], [0.5, 1, 0], [0, 0, 1]), dtype=np.float32)  # unit vector (0, 1) to (1, 1), shear to x direction
+    S = inverse@S@convert
     # To match OpenCV convention
-    S = inverse@S@convert[:, :-1]
-    S = np.transpose(S)
+    S = np.transpose(S[:, :-1])
 
     translated = cv2.warpAffine(img, T, (cols, rows))
     rotated = cv2.warpAffine(img, R, (cols, rows))
