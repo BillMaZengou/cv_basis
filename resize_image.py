@@ -1,20 +1,20 @@
 import cv2
 
 if __name__ == "__main__":
-    name = "food"
+    name = "kekelo"
     img = cv2.imread('./{}.jpg'.format(name), cv2.IMREAD_UNCHANGED)
     # cv2.imshow("Original image", img)
     print('Original Dimensions : ',img.shape)
 
-    scale_percent = 10       # percent of original size
+    scale_percent = 40       # percent of original size
     width = int(img.shape[1] * scale_percent / 100)
     height = int(img.shape[0] * scale_percent / 100)
     dim = (width, height)
     # resize image
     resized = cv2.resize(img, dim, interpolation = cv2.INTER_LINEAR)
 
-    fx = 2.5
-    fy = 2.5
+    fx = 1.5
+    fy = 1.5
 
     resized1 = cv2.resize(resized, dsize=None, fx=fx, fy=fy, interpolation = cv2.INTER_NEAREST)
 

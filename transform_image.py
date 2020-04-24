@@ -4,7 +4,7 @@ import cv2
 if __name__ == "__main__":
     name = "flower"
     img = cv2.imread('Result/{}_Resized_image.jpg'.format(name), cv2.IMREAD_UNCHANGED)
-    cv2.imshow("Original image", img)
+    # cv2.imshow("Original image", img)
     rows, cols, _ = img.shape
     # print(img.shape)
 
