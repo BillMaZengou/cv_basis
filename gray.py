@@ -26,6 +26,7 @@ if __name__ == "__main__":
 
     average = cv2.imread('Grey image with average weight.jpg', cv2.IMREAD_UNCHANGED)
     gray = cv2.imread('Grey image with Rec601 weight.jpg', cv2.IMREAD_UNCHANGED)
+
     cv2.imshow("Gray image", gray)
     cv2.imshow("Grey image", average)
     cv2.imshow("BGR to Grey image", bgr2grey)
@@ -40,3 +41,16 @@ if __name__ == "__main__":
         cv2.imwrite("Result/{}_RGB_to_Grey.jpg".format(name), bgr2grey)
         cv2.imwrite("Result/My_{}_RGB_to_Grey.jpg".format(name), bgr2grey)
         cv2.destroyAllWindows()
+
+
+
+"""""""""
+ ________  _______   ________  ___  ___  ___  _______   _____ ______   ________
+|\   __  \|\  ___ \ |\   __  \|\  \|\  \|\  \|\  ___ \ |\   _ \  _   \|\   __  \
+\ \  \|\  \ \   __/|\ \  \|\  \ \  \\\  \ \  \ \   __/|\ \  \\\__\ \  \ \  \|\  \
+ \ \   _  _\ \  \_|/_\ \  \\\  \ \  \\\  \ \  \ \  \_|/_\ \  \\|__| \  \ \   __  \
+  \ \  \\  \\ \  \_|\ \ \  \\\  \ \  \\\  \ \  \ \  \_|\ \ \  \    \ \  \ \  \ \  \
+   \ \__\\ _\\ \_______\ \_____  \ \_______\ \__\ \_______\ \__\    \ \__\ \__\ \__\
+    \|__|\|__|\|_______|\|___| \__\|_______|\|__|\|_______|\|__|     \|__|\|__|\|__|
+                              \|__|
+"""""""""
