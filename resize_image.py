@@ -1,12 +1,12 @@
 import cv2
 
 if __name__ == "__main__":
-    name = "nightsky"
+    name = "flower"
     img = cv2.imread('./{}.jpg'.format(name), cv2.IMREAD_UNCHANGED)
     # cv2.imshow("Original image", img)
     print('Original Dimensions : ',img.shape)
 
-    scale_percent = 12      # percent of original size
+    scale_percent = 8      # percent of original size
     width = int(img.shape[1] * scale_percent / 100)
     height = int(img.shape[0] * scale_percent / 100)
     dim = (width, height)
