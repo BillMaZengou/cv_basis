@@ -2,11 +2,11 @@ import cv2
 
 if __name__ == "__main__":
     name = "flower"
-    img = cv2.imread('./{}.jpg'.format(name), cv2.IMREAD_UNCHANGED)
+    img = cv2.imread('../image/{}.jpg'.format(name), cv2.IMREAD_UNCHANGED)
     # cv2.imshow("Original image", img)
     print('Original Dimensions : ',img.shape)
 
-    scale_percent = 8      # percent of original size
+    scale_percent = 5     # percent of original size
     width = int(img.shape[1] * scale_percent / 100)
     height = int(img.shape[0] * scale_percent / 100)
     dim = (width, height)
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     resized1 = cv2.resize(resized, dsize=None, fx=fx, fy=fy, interpolation = cv2.INTER_NEAREST)
 
     resized2 = cv2.resize(resized, dsize=None, fx=fx, fy=fy, interpolation = cv2.INTER_LINEAR)
-    print('Resized Dimensions : ',resized.shape)
+    print('Resized Dimensions : ', resized.shape)
 
     cv2.imshow("Resized image", resized)
     cv2.imshow("INTER_NEAREST image", resized1)
